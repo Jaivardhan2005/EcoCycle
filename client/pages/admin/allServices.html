@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>All Services - EcoCycle</title>
+  <link rel="stylesheet" href="/assets/css/style.css?v=3">
+</head>
+<body class="app-body">
+    
+    <div class="app-layout">
+    <aside class="app-sidebar">
+      <div class="sidebar-header">
+        <div class="sidebar-logo-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12A10 10 0 0 0 15 21.54A10 10 0 0 1 15 2.46 10 10 0 0 0 2 12Z"></path></svg>
+        </div>
+        <div class="sidebar-header-text">
+          <h2>Admin Hub</h2>
+          <p>Platform Management</p>
+        </div>
+      </div>
+      
+      <nav class="sidebar-nav">
+      <a href="dashboard.html" >
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path></svg>
+        Overview
+      </a>
+      <a href="verifyAgencies.html" >
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path></svg>
+        Verify Agencies
+      </a>
+      <a href="verifyServices.html" >
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path></svg>
+        Verify Services
+      </a>
+      <a href="allAgencies.html" >
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+        All Agencies
+      </a>
+      <a href="allServices.html" class="active">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+        All Services
+      </a>
+      <a href="allUsers.html" >
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+        All Users
+      </a>
+      </nav>
+      
+      <div class="sidebar-footer">
+        <a href="#">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+          Support
+        </a>
+        <a href="#" id="logoutBtn" class="logout">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg>
+          Logout
+        </a>
+      </div>
+    </aside>
+
+    <main class="app-main">
+      <header class="app-header">
+        <div class="search-bar">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          <input type="text" id="mainSearchInput" placeholder="Search service name...">
+        </div>
+        <div class="header-actions">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg>
+          <div class="header-avatar">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+          </div>
+        </div>
+      </header>
+
+      <div class="app-content">
+        <h1>All Services</h1>
+        <p class="app-subtitle">Manage and view all registered e-waste collection services.</p>
+
+        <div class="filters-container" style="background: white; padding: 1.5rem; border-radius: 12px; margin-bottom: 1.5rem; box-shadow: 0 4px 6px rgba(0,0,0,0.05); display: flex; flex-wrap: wrap; gap: 1rem; align-items: flex-end;">
+          <div style="flex: 1; min-width: 200px;">
+            <label style="font-size: 0.85rem; font-weight: 600; color: #495057; margin-bottom: 0.5rem; display: block;">Location / Area</label>
+            <input type="text" id="locationSearch" placeholder="Search location..." style="width: 100%; padding: 0.6rem; border: 1px solid #ced4da; border-radius: 8px;">
+          </div>
+          <div style="flex: 1; min-width: 200px;">
+            <label style="font-size: 0.85rem; font-weight: 600; color: #495057; margin-bottom: 0.5rem; display: block;">Status Filter</label>
+            <select id="statusFilter" style="width: 100%; padding: 0.6rem; border: 1px solid #ced4da; border-radius: 8px; background: white;">
+              <option value="all">All Services</option>
+              <option value="approved">Approved</option>
+              <option value="pending">Pending</option>
+            </select>
+          </div>
+          <div style="flex: 1; min-width: 200px;">
+            <label style="font-size: 0.85rem; font-weight: 600; color: #495057; margin-bottom: 0.5rem; display: block;">Sort By Date</label>
+            <select id="dateSort" style="width: 100%; padding: 0.6rem; border: 1px solid #ced4da; border-radius: 8px; background: white;">
+              <option value="newest">Newest First</option>
+              <option value="oldest">Oldest First</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="table-card" style="overflow-x:auto;">
+          <table class="app-table">
+            <thead>
+              <tr>
+                <th>Service Name</th>
+                <th>Category (Waste)</th>
+                <th>Location</th>
+                <th>Status</th>
+                <th>Created Date</th>
+              </tr>
+            </thead>
+            <tbody id="servicesTable">
+              <!-- Rows loaded dynamically -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </main>
+  </div>
+  <script src="/utils/api.js"></script>
+  <script src="/utils/auth.js"></script>
+  <script>
+    auth.checkAuth('admin');
+    document.getElementById('logoutBtn').addEventListener('click', auth.logout);
+
+    let allServices = [];
+
+    async function fetchServices() {
+      const tbody = document.getElementById('servicesTable');
+      tbody.innerHTML = '<tr><td colspan="5" style="text-align:center;">Loading...</td></tr>';
+      try {
+        allServices = await api.get('/admin/services');
+        renderServices();
+      } catch (err) {
+        tbody.innerHTML = `<tr><td colspan="5" style="text-align:center; color:red;">Error: ${err.message}</td></tr>`;
+      }
+    }
+
+    function renderServices() {
+      const tbody = document.getElementById('servicesTable');
+      const nameSearch = document.getElementById('mainSearchInput').value.toLowerCase();
+      const locationSearch = document.getElementById('locationSearch').value.toLowerCase();
+      const statusFilter = document.getElementById('statusFilter').value;
+      const sortDate = document.getElementById('dateSort').value;
+
+      let filtered = allServices.filter(s => {
+        const matchesName = s.serviceName.toLowerCase().includes(nameSearch);
+        const matchesLocation = s.serviceArea.toLowerCase().includes(locationSearch);
+        let matchesStatus = true;
+        if (statusFilter === 'approved') matchesStatus = s.isApproved === true;
+        if (statusFilter === 'pending') matchesStatus = s.isApproved === false;
+
+        return matchesName && matchesLocation && matchesStatus;
+      });
+
+      filtered.sort((a, b) => {
+        const dateA = new Date(a.createdAt || 0).getTime();
+        const dateB = new Date(b.createdAt || 0).getTime();
+        return sortDate === 'newest' ? dateB - dateA : dateA - dateB;
+      });
+
+      if (filtered.length === 0) {
+        tbody.innerHTML = '<tr><td colspan="5" style="text-align:center; padding: 2rem;">No services found matching filters.</td></tr>';
+        return;
+      }
+
+      tbody.innerHTML = filtered.map(s => {
+        const statusBadge = s.isApproved 
+          ? '<span style="padding: 4px 8px; border-radius: 12px; background: #d4edda; color: #155724; font-size: 0.8rem; font-weight: bold;">Approved</span>'
+          : '<span style="padding: 4px 8px; border-radius: 12px; background: #fff3cd; color: #856404; font-size: 0.8rem; font-weight: bold;">Pending</span>';
+        
+        return `
+          <tr>
+            <td><strong>${s.serviceName}</strong><br><small style="color:#6c757d;">by ${s.agency ? s.agency.name : 'Unknown'}</small></td>
+            <td>${Array.isArray(s.acceptableWaste) ? s.acceptableWaste.join(', ') : s.acceptableWaste}</td>
+            <td>${s.serviceArea}</td>
+            <td>${statusBadge}</td>
+            <td>${new Date(s.createdAt).toLocaleDateString()}</td>
+          </tr>
+        `;
+      }).join('');
+    }
+
+    document.getElementById('mainSearchInput').addEventListener('input', renderServices);
+    document.getElementById('locationSearch').addEventListener('input', renderServices);
+    document.getElementById('statusFilter').addEventListener('change', renderServices);
+    document.getElementById('dateSort').addEventListener('change', renderServices);
+
+    fetchServices();
+  </script>
+</body>
+</html>

@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Impact - EcoCycle</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css?v=3">
+  <style>
+    .impact-hero {
+      text-align: center;
+      padding: 6rem 2rem 3rem 2rem;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .impact-hero h1 {
+      font-size: 3.5rem;
+      font-weight: 800;
+      color: #111;
+      margin-bottom: 1.5rem;
+      letter-spacing: -1px;
+    }
+    .impact-hero p {
+      font-size: 1.25rem;
+      color: #555;
+      line-height: 1.7;
+    }
+    
+    .impact-section {
+      padding: 2rem 2rem 6rem 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    /* Statistics Grid */
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-bottom: 5rem;
+    }
+    .stat-card {
+      background: linear-gradient(135deg, #188038 0%, #0d4a1f 100%);
+      color: white;
+      padding: 3rem 2rem;
+      border-radius: 24px;
+      text-align: center;
+      box-shadow: 0 15px 40px rgba(24, 128, 56, 0.2);
+      transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+      position: relative;
+      overflow: hidden;
+    }
+    .stat-card::after {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 60%);
+      pointer-events: none;
+    }
+    .stat-card:hover {
+      transform: translateY(-8px);
+    }
+    .stat-number {
+      font-size: 3.5rem;
+      font-weight: 800;
+      margin-bottom: 0.5rem;
+      line-height: 1;
+    }
+    .stat-label {
+      font-size: 1.1rem;
+      font-weight: 500;
+      opacity: 0.9;
+    }
+
+    /* Impact Details Grid */
+    .impact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2rem;
+    }
+    .impact-card {
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.9);
+      padding: 3rem 2.5rem;
+      border-radius: 24px;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.03);
+      transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+      position: relative;
+      overflow: hidden;
+    }
+    .impact-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: #188038;
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+    .impact-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 50px rgba(0,0,0,0.08);
+    }
+    .impact-card:hover::before {
+      opacity: 1;
+    }
+    .impact-icon {
+      background: rgba(24, 128, 56, 0.1);
+      color: #188038;
+      width: 64px;
+      height: 64px;
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 2rem;
+    }
+    .impact-card h2 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      color: #111;
+    }
+    .impact-card p {
+      color: #555;
+      line-height: 1.6;
+      font-size: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="main-nav">
+    <div class="nav-left">
+      <a href="/index.html" class="logo">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#188038" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="logo-icon"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+        EcoCycle
+      </a>
+    </div>
+    <div class="nav-center">
+      <a href="/index.html" class="nav-link">Home</a>
+      <a href="/pages/auth/login.html" class="nav-link">Individuals</a>
+      <a href="/pages/auth/login.html" class="nav-link">Agencies</a>
+      <a href="/impact.html" class="nav-link active">Impact</a>
+      <a href="/about.html" class="nav-link ">About</a>
+    </div>
+    <div class="nav-right">
+      <a href="/pages/auth/login.html" class="login-link">Login</a>
+      <a href="/pages/auth/register.html" class="btn btn-get-started">Get Started</a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="impact-hero">
+    <div class="badge">Measurable Change</div>
+    <h1>Driving a Sustainable Future</h1>
+    <p>Every device recycled through EcoCycle represents a direct victory for our planet. We track our impact meticulously to ensure we're delivering on our promise of a cleaner, greener world.</p>
+  </section>
+
+  <!-- Main Content -->
+  <section class="impact-section">
+    <!-- Statistics Grid -->
+    <div class="stats-grid">
+      <div class="stat-card">
+        <div class="stat-number" id="stat-services">...</div>
+        <div class="stat-label">Services Available</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number" id="stat-users">...</div>
+        <div class="stat-label">Active Users Served</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number" id="stat-agencies">...</div>
+        <div class="stat-label">Certified Agencies</div>
+      </div>
+    </div>
+
+    <!-- Impact Cards -->
+    <div class="impact-grid">
+      
+      <!-- Environmental Impact -->
+      <div class="impact-card">
+        <div class="impact-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+        </div>
+        <h2>Environmental Impact</h2>
+        <p>By preventing electronics from entering landfills, we drastically reduce soil and groundwater pollution caused by heavy metals like mercury and lead. Proper recycling also lowers the carbon footprint associated with mining new raw materials.</p>
+      </div>
+
+      <!-- User Impact -->
+      <div class="impact-card">
+        <div class="impact-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+        </div>
+        <h2>User Impact</h2>
+        <p>We eliminate the confusion and friction of electronic disposal. Individuals can clear out hazardous clutter from their homes with a few clicks, knowing exactly where their devices are going and how their data is being securely wiped.</p>
+      </div>
+
+      <!-- Community Impact -->
+      <div class="impact-card">
+        <div class="impact-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+        </div>
+        <h2>Community Impact</h2>
+        <p>EcoCycle fosters local green economies by creating steady work for certified regional recycling agencies. We also run awareness campaigns, educating neighborhoods about the hidden dangers of improper technological waste.</p>
+      </div>
+
+      <!-- Recycling Contribution -->
+      <div class="impact-card">
+        <div class="impact-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="21 8 21 21 3 21 3 8"></polyline><rect x="1" y="3" width="22" height="5"></rect><line x1="10" y1="12" x2="14" y2="12"></line></svg>
+        </div>
+        <h2>Recycling Contribution</h2>
+        <p>We champion the circular economy. Every smartphone or laptop collected provides raw silicon, gold, and copper that is reintroduced into the manufacturing supply chain, preserving natural resources and promoting sustainable tech.</p>
+      </div>
+
+      <!-- Future Impact -->
+      <div class="impact-card">
+        <div class="impact-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+        </div>
+        <h2>Future Impact</h2>
+        <p>Our long-term vision scales beyond our current borders. We aim to establish EcoCycle in 50 countries by 2030, standardizing global e-waste protocols and achieving a zero-waste certification standard for consumer electronics.</p>
+      </div>
+      
+      <!-- Call to Action -->
+      <div class="impact-card" style="background: rgba(24, 128, 56, 0.05); border-color: rgba(24, 128, 56, 0.2); display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;">
+        <h2 style="color: #188038;">Be Part of the Impact</h2>
+        <p style="margin-bottom: 2rem;">Ready to properly dispose of your electronics?</p>
+        <a href="/pages/auth/register.html" class="btn">Join Us Today</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="main-footer">
+    <div class="footer-left">
+      <a href="/index.html" class="logo" style="color: #188038;">EcoCycle</a>
+      <p>&copy; 2024 EcoCycle. The Regenerative Canvas.</p>
+    </div>
+    <div class="footer-right">
+      <a href="#">Privacy</a>
+      <a href="#">Terms</a>
+      <a href="/impact.html">Impact</a>
+      <a href="/about.html">About</a>
+    </div>
+  </footer>
+
+  <script>
+    async function fetchStats() {
+      try {
+        const res = await fetch('/api/stats');
+        const data = await res.json();
+        
+        document.getElementById('stat-agencies').innerText = data.agencies;
+        document.getElementById('stat-users').innerText = data.users;
+        document.getElementById('stat-services').innerText = data.services;
+      } catch (err) {
+        console.error('Failed to load stats', err);
+        document.getElementById('stat-agencies').innerText = '0';
+        document.getElementById('stat-users').innerText = '0';
+        document.getElementById('stat-services').innerText = '0';
+      }
+    }
+    
+    fetchStats();
+  </script>
+</body>
+</html>
